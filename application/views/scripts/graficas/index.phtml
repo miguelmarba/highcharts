@@ -1,0 +1,81 @@
+<?php //echo $this->baseUrl;exit; ?>
+<script type="text/javascript">
+$(document).ready(function() {
+    chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container',
+            type: 'column'
+        },
+        title: {
+            text: 'El consumo de frutas'
+        },
+        xAxis: {
+            categories: ['Manzanas', 'Plátanos', 'Naranjas']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruta adquirido'
+            }
+        },
+        series: [{
+            name: 'Juana',
+                    data: [1, 0, 4]
+            },  {
+            name: 'Miguel',
+                data: [5, 7, 3]
+        }]
+    });
+    
+    //Cambiamos el titulo
+    $("#hola").click(function(){
+        chart1.title.text = "Cambiamos el titulo de la grafica";
+        //alert("Hola Miguel Angel");
+    });
+});
+</script>
+
+<style>
+    a:link,
+    a:visited
+    {
+        color: #0398CA;
+    }
+
+    span#zf-name
+    {
+        color: #91BE3F;
+    }
+
+    div#welcome
+    {
+        color: #FFFFFF;
+        background-image: url(http://framework.zend.com/images/bkg_header.jpg);
+        width:  600px;
+        height: 600px;
+        border: 2px solid #444444;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    div#more-information
+    {
+        background-image: url(http://framework.zend.com/images/bkg_body-bottom.gif);
+        height: 100%;
+    }
+</style>
+<div id="welcome">
+    <h1>Graficas<span id="zf-name">Highcharts!</span></h1>
+
+    <h3>Ejemplos de graficas</h3>
+
+    <div id="more-information">
+        <a id="hola" href="#">Hola</a>
+        <div id="container" style="width: 100%; height: 400px"></div>
+<!--        <p><img src="http://framework.zend.com/images/PoweredBy_ZF_4LightBG.png" /></p>-->
+<!--        <p>
+            Helpful Links: <br />
+            <a href="http://framework.zend.com/">Zend Framework Website</a> |
+            <a href="http://framework.zend.com/manual/en/">Zend Framework Manual</a>
+        </p>-->
+    </div>
+</div>
