@@ -20,6 +20,11 @@ class GraficasController extends Zend_Controller_Action
         // action body
     }
     
+    public function pastelAction()
+    {
+        // action body
+    }
+    
     /*
      * Respuestas del servidor por Ajax
      */
